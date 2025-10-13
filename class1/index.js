@@ -75,14 +75,46 @@
 //   return false
 // }
 // console.log(check([1,2,3,4]))
-function arangram(s,t){
-  for(i=0;i<s.length;i++){
-    for(j = 0;j<t.length;j++){
-      if(s.length === t.length){
-        return true
-      }else if()
+// function arangram(s,t){
+//   for(i=0;i<s.length;i++){
+//     for(j = 0;j<t.length;j++){
+//       if(s.length === t.length){
+//         return true
+//       }else if()
+//     }
+//   }
+//   return false
+// }
+// console.log(arangram("note","iome"))
+
+function anagram(s,t){
+  if(s.length !== t.length)return false;
+  let obj = {}
+  let obj2 = {}
+  for(let i = 0; i<s.length;i++){
+    if(obj[s[i]]){
+      obj[s[i]] = obj[s[i]] + 1
+    }else{
+      obj[s[i]] = 1
+    }
+    if(obj2[t[i]]){
+      obj2[y[i]] = obj2[t[i]] + 1;
+    }else{
+      obj2[t[i]]= 1
     }
   }
-  return false
+  const keys = Object.keys(obj);
+  for(let i =0; i<keys.length;i++){
+    const key = keys[i];
+    if(obj[key] !== obj2[key]){
+      return false;
+    }
+  }
+  return true;
 }
-console.log(arangram("note","iome"))
+console.log(anagram('tone','note'))
+
+
+
+
+
