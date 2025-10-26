@@ -87,34 +87,55 @@
 // }
 // console.log(arangram("note","iome"))
 
-function anagram(s,t){
-  if(s.length !== t.length)return false;
-  let obj = {}
-  let obj2 = {}
-  for(let i = 0; i<s.length;i++){
-    if(obj[s[i]]){
-      obj[s[i]] = obj[s[i]] + 1
-    }else{
-      obj[s[i]] = 1
-    }
-    if(obj2[t[i]]){
-      obj2[y[i]] = obj2[t[i]] + 1;
-    }else{
-      obj2[t[i]]= 1
-    }
-  }
-  const keys = Object.keys(obj);
-  for(let i =0; i<keys.length;i++){
-    const key = keys[i];
-    if(obj[key] !== obj2[key]){
-      return false;
-    }
-  }
-  return true;
+// function anagram(s,t){
+//   if(s.length !== t.length)return false;
+//   let obj = {}
+//   let obj2 = {}
+//   for(let i = 0; i<s.length;i++){
+//     if(obj[s[i]]){
+//       obj[s[i]] = obj[s[i]] + 1
+//     }else{
+//       obj[s[i]] = 1
+//     }
+//     if(obj2[t[i]]){
+//       obj2[y[i]] = obj2[t[i]] + 1;
+//     }else{
+//       obj2[t[i]]= 1
+//     }
+//   }
+//   const keys = Object.keys(obj);
+//   for(let i =0; i<keys.length;i++){
+//     const key = keys[i];
+//     if(obj[key] !== obj2[key]){
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+// console.log(anagram('tone','note'))
+
+
+// const arr = [1,2,3,4]
+// for(let i=0;i<arr.length;i++){
+//    let mul = 0
+//   for(let j=0;j<arr.length;j++){
+//     // console.log(arr[i]!==arr[j])
+//     if(arr[i] !==arr[j]){
+//       mul = arr[j] * arr[j]
+//     }
+//   }
+//   console.log(mul)
+// }
+// for(let i= 0;i<arr.length;i++){
+//   // let prefix = arr[0]
+//   // console.log(prefix[i+1]*arr[i])
+// }
+
+const arr = [1,2,3,4]
+let prefiArr = []
+let suffixArr =[]
+let prefix =1, suffix=1; 
+for(let i=0;i<nums.length;i++){
+   prefiArr[i]
 }
-console.log(anagram('tone','note'))
-
-
-
-
 
