@@ -131,11 +131,39 @@
 //   // console.log(prefix[i+1]*arr[i])
 // }
 
-const arr = [1,2,3,4]
-let prefiArr = []
-let suffixArr =[]
-let prefix =1, suffix=1; 
-for(let i=0;i<nums.length;i++){
-   prefiArr[i]
+// const arr = [1,2,3,4]
+// let prefiArr = []
+// let suffixArr =[]
+// let prefix =1, suffix=1; 
+// for(let i=0;i<nums.length;i++){
+//    prefiArr[i]
+// }
+
+// given an integer array nums, rotate the arrray to the right by k steps where k is non-negative 
+// const nums = [1,2,3,4,5,6,7], k = 3
+// for(let i = 0;i<nums.length-1;i++){
+   
+//   console.log(nums[i])
+// }
+
+// function rotate(nums, k){
+//    let newarr = []
+//    for(let i=k+1;i<nums.length;i++){
+//       newarr.push(nums[i])
+//    }for(let i =0;i<=k;i++){
+//       newarr.push(nums[i])
+//    }
+//    console.log(newarr)
+// }
+// console.log(rotate([1,2,3,4,5,6,7],3))
+
+
+function rotate(arr, k){
+   for(let i=0,j=arr.length-k;i<k;i++,j++){
+      arr[i] = (arr[i]+arr[j]) -  (arr[j]=arr[i])
+   }
+   console.log(arr)
+
 }
 
+rotate([1,2,3,4,5,6,7],3)
