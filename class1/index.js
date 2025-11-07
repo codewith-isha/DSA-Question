@@ -156,14 +156,13 @@
 //    console.log(newarr)
 // }
 // console.log(rotate([1,2,3,4,5,6,7],3))
-
-
+// [5,6,7,1,2,3,4]
 function rotate(arr, k){
    for(let i=0,j=arr.length-k;i<k;i++,j++){
-      arr[i] = (arr[i]+arr[j]) -  (arr[j]=arr[i])
+      // console.log(arr[j])
+      console.log(arr[i]+1)
+      arr[i] = (arr[i]+arr[j]) - (arr[j]=arr[i])
    }
    console.log(arr)
-
 }
-
 rotate([1,2,3,4,5,6,7],3)
