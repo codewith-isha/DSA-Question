@@ -157,12 +157,51 @@
 // }
 // console.log(rotate([1,2,3,4,5,6,7],3))
 // [5,6,7,1,2,3,4]
-function rotate(arr, k){
-   for(let i=0,j=arr.length-k;i<k;i++,j++){
-      // console.log(arr[j])
-      console.log(arr[i]+1)
-      arr[i] = (arr[i]+arr[j]) - (arr[j]=arr[i])
-   }
-   console.log(arr)
+// function rotate(arr, k){
+//    for(let i=0,j=arr.length-k;i<k;i++,j++){
+//       // console.log(arr[j])
+//       console.log(arr[i]+1)
+//       arr[i] = (arr[i]+arr[j]) - (arr[j]=arr[i])
+//    }
+//    console.log(arr)
+// }
+// rotate([1,2,3,4,5,6,7],3)
+// let arr = [5,7,2,1,0,4,11,6,3,12,13,14,17]
+// we have to find longest consicutive number 
+
+// function number(arr){
+//    for(let i = 1;i<arr.length;i++){
+//       let count = 0
+//       if(arr[i]===arr[i]-1){
+//         count++
+//       }
+//       return count
+//    }
+// }
+
+
+// console.log(number( [5,7,2,1,0,4,11,6,3,12,13,14,17]))
+function number(arr){
+    let obj = {}
+    for (let i = 0; i<arr.length;i++){
+      obj[arr[i]] = true
+    }
+    for(let i= 0;i<arr.length; i++)
+    {
+      let num = arr[i]
+      // console.log(num)
+      if(obj[num-1]!==undefined){
+         obj[num] = false
+      }
+    }
+    let count = 0;
+    for (let val in obj){
+      if(obj[val]){
+         console.log(val)
+         count++
+         if(obj[val+1]) count++
+      }
+    }
+   //  return obj 
 }
-rotate([1,2,3,4,5,6,7],3)
+console.log(number([5,7,2,1,0,4,11,6,3,12,13,14,17]))
